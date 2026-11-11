@@ -151,9 +151,20 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.2rem;m
 ol.how{padding-left:1.2rem}
 ol.how li{margin-bottom:.6rem}
 .actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.sitenav{position:sticky;top:0;z-index:30;background:rgba(27,13,46,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.sitenav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:58px;flex-wrap:wrap}
+.sitenav .brand{font-family:"Playfair Display",Georgia,serif;font-style:italic;color:var(--gold);text-decoration:none;font-size:1.15rem;white-space:nowrap}
+.sitenav .links{display:flex;gap:1.3rem;overflow-x:auto;scrollbar-width:none}
+.sitenav .links::-webkit-scrollbar{display:none}
+.sitenav .links a{color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:600;white-space:nowrap;padding:.3rem 0;border-bottom:2px solid transparent}
+.sitenav .links a:hover{color:var(--gold)}
+.sitenav .links a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold)}
+@media (max-width:640px){.sitenav .wrap{padding-top:.5rem;padding-bottom:.4rem}.sitenav .links{width:100%;gap:1.1rem}}
+html{scroll-padding-top:70px}
 </style>
 </head>
 <body>
+<nav class="sitenav" aria-label="Main"><div class="wrap"><a class="brand" href="/">Quantum Marie</a><div class="links"><a href="/">Classic Reading</a><a href="/girls-night/" aria-current="page">Girls Night</a><a href="/services/">Healing</a><a href="https://www.mariemonroesclubhouse.com">The Clubhouse</a></div></div></nav>
 
 <header class="hero gn-hero">
   <div class="wrap narrow">
@@ -226,9 +237,12 @@ ol.how li{margin-bottom:.6rem}
   <div class="name">Quantum Marie</div>
   <p>Marie Monroe’s Clubhouse, Winpenny House, 45 High Street, Stockton-on-Tees</p>
   <nav>
-    <a href="/">Quantum Marie Classic Reading</a>
+    <a href="/">Classic Reading</a>
+    <a href="/girls-night/">Girls Night</a>
     <a href="/services/">Healing</a>
     <a href="https://www.mariemonroesclubhouse.com">Marie Monroe’s Clubhouse</a>
+    <a href="/book/">The book</a>
+    <a href="/free/">Free first chapter</a>
   </nav>
 </footer>
 </body>
