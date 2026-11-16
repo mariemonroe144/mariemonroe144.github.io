@@ -174,13 +174,6 @@ html{scroll-padding-top:70px}
   </div>
 </header>
 
-<aside class="closing distance" aria-label="Distance readings ending">
-  <div class="wrap">
-    <p><strong>Distance readings end this Friday.</strong> Can’t get to Stockton? You have until midnight on Friday 13 November to book a Quantum Distance Reading, your full reading recorded and sent to you within 24 hours. After that, every reading is in person.</p>
-    <a class="btn" href="https://marie-monroe-2.myshopify.com/products/quantum-distance-reading">Book a Quantum Distance Reading</a>
-  </div>
-</aside>
-
 <section>
   <div class="wrap split">
     <img src="https://quantummarie.com/reading.jpg" alt="Marie laying out a card spread" loading="lazy">
@@ -374,12 +367,6 @@ html{scroll-padding-top:70px}
 </div>
 
 <script>
-// Removes the distance readings announcement after midnight on Friday 13 November 2026, UK time
-(function(){
-  if (new Date() >= new Date("2026-11-14T00:00:00Z")) {
-    document.querySelectorAll(".distance").forEach(function(el){ el.remove(); });
-  }
-})();
 // Sticky booking bar on phones, shown once the hero button has scrolled away
 (function(){
   var bar=document.getElementById("sticky"), btn=document.querySelector(".hero .btn.gold");
